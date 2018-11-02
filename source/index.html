@@ -123,9 +123,56 @@
         </div>
       </section>
 
-
-
+      <section class="tariffs">
+        <h2 class="visually-hidden">Тарифы</h2>
+        <div class="tariffs__control controls">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-1">
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-2" checked>
+          <input class="controls__point" type="radio" name="tariffs-control" id="tariffs-control-3">
+          <div class="controls__labels">
+            <label for="tariffs-control-1" class="controls__label" tabindex="0"><span class="visually-hidden">Первый слайд</span></label>
+            <label for="tariffs-control-2" class="controls__label" tabindex="0"><span class="visually-hidden">Второй слайд</span></label>
+            <label for="tariffs-control-3" class="controls__label" tabindex="0"><span class="visually-hidden">Третий слайд</span></label>
+          </div>
+        </div>
+        <div class="tariffs__bg">
+          <table class="tariffs__slider">
+            <tr class="tariffs__str">
+              <td class="tariffs__empty"></td>
+              <td class="tariffs__name">
+                <h3 class="tariffs__title">База</h3>
+                <p class="tariffs__value">1,99 USD</p>
+              </td>
+              <td class="tariffs__name tariffs__name--hit tariffs__name--active">
+                <h3 class="tariffs__title">Стандарт</h3>
+                <p class="tariffs__value">3,99 USD</p>
+              </td>
+              <td class="tariffs__name">
+                <h3 class="tariffs__title">Анлим</h3>
+                <p class="tariffs__value">9,99 USD</p>
+              </td>
+            </tr>
+            <tr class="tariffs__str tariffs__str--filter">
+              <td class="tariffs__option">Розовый фильтр</td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes" data-property="Розовый фильтр"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr class="tariffs__str tariffs__str--smile">
+              <td class="tariffs__option">Смайлики</td>
+              <td class="tariffs__option tariffs__option--no"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--yes" data-property="Смайлики"><span class="visually-hidden">Да</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+            <tr class="tariffs__str tariffs__str--comment">
+              <td class="tariffs__option">Комментарии</td>
+              <td class="tariffs__option tariffs__option--no"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--no" data-property="Комментарии"><span class="visually-hidden">Нет</span></td>
+              <td class="tariffs__option tariffs__option--yes"><span class="visually-hidden">Да</span></td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </main>
-
   </body>
 </html>
