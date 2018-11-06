@@ -178,12 +178,59 @@
               </div>
 
               <p class="post__message">Всем GM и взаимные лайки!</p>
-              
+
               <button class="post__like" type="button">Нравится: 2560</button>
             </div>
           </li>
         </ul>
       </section>
+
+      <section class="upload set-width">
+        <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
+
+        <p class="upload__offer">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+
+        <div class="upload__photo-editor">
+          <div class="upload__img">
+            <img src="#" alt="road">
+          </div>
+
+          <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="editor__tools">
+              <li class="editor__item editor__item--mobile-active">
+                <button class="editor__btn editor__btn--crop" type="button">
+                  Обрезать
+                </button>
+
+                <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--fill" type="button">
+                  Редактировать
+                </button>
+
+                <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--contrast" type="button">
+                  контраст
+                </button>
+
+                <div class="editor__scale editor__scale--contrast"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+            </ul>
+
+            <div class="editor__buttons">
+              <button class="editor__button editor__button--execute" type="submit">Запостить</button>
+
+              <button class="editor__button editor__button--cancel" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
 
   </body>
 </html>
