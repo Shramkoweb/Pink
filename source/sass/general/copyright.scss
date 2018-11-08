@@ -3,6 +3,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .copyright__text {
@@ -10,6 +14,10 @@
   padding-right: 15px;
 
   @include text-value(14px, 18px, 400, $text-color);
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
 }
 
 .copyright__img {
@@ -17,4 +25,16 @@
   height: 34px;
   flex-shrink: 0;
   color: $violet-color;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+
+    &:hover {
+      color: rgba(51, 51, 51, 1);
+    }
+
+    &:active {
+      color: rgba(51, 51, 51, 0.3);
+    }
+  }
 }
