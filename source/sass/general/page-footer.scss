@@ -1,0 +1,38 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.page-footer__logo {
+  margin-bottom: 35px;
+}
+
+.page-footer__logo-image {
+  color: #333333;
+
+  &:hover {
+    color: $violet-color;
+  }
+
+  &:active {
+    color: #333333;
+
+    opacity: 0.3;
+  }
+
+  &--mobile {
+    width: 147px;
+    height: 41px;
+  }
+
+  &--desktop {
+    display: none;
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 31px;
+}
