@@ -14,6 +14,19 @@
   background-color: white;
   box-sizing: border-box;
 
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 93px 50px 75px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 93px 150px 87px;
+
+    &--form {
+      padding: 93px 100px 90px;
+    }
+  }
+
   &--form {
     padding-bottom: 30px;
   }
@@ -21,5 +34,9 @@
   &--absent-in-mobile {
     padding: 0;
     margin: 0;
+
+    @media (max-width: $mobile-width-only) {
+      display: none;
+    }
   }
 }
