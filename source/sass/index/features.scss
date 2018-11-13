@@ -1,0 +1,52 @@
+.features__slogans {
+  margin-bottom: 10px;
+  padding-top: 42px;
+  display: flex;
+  flex-direction: column;
+}
+
+.features__slogan {
+  @include text-value(24px, 28px, 300, $text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.features__bg {
+  background-color: $gray-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100%  30px;
+  background-position: top left;
+}
+
+
+.features__list {
+  @include list-init;
+  max-width: 280px;
+  margin: 0 auto;
+  padding-top: 75px;
+  padding-bottom: 286px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  background-image: url("../img/iphone-screen-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom -42px;
+}
+
+.features__item {
+  max-width: inherit;
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.features__text {
+  margin-bottom: 13px;
+  margin-top: 12px;
+
+  @include text-value(14px, 24px, 400, $text-color);
+}
