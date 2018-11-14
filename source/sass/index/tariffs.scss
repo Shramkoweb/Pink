@@ -16,12 +16,33 @@
   background-repeat: no-repeat;
   background-size: 100% 30px;
   background-position: top left;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 90px;
+    padding-bottom: 68px;
+    background-size: 100% 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 140px;
+    padding-bottom: 95px;
+    background-size: 100% 67px;
+  }
 }
 
 .tariffs__slider {
   min-width: 835px;
   border-collapse: collapse;
   border: 2px solid $gray-color;
+
+  @media (min-width: $tablet-width) {
+    width: 618px;
+    min-width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 940px;
+  }
 }
 
 .tariffs__control {
@@ -29,20 +50,44 @@
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .tariffs__str {
   min-height: 60px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 47px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 61px;
+  }
 }
 
 .tariffs__str:first-child {
   min-height: 100px;
   background-color: $main-color;
+
+  @media (min-width: $tablet-width) {
+    min-height: 78px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 96px;
+  }
 }
 
 .tariffs__empty {
   border-color: transparent;
   background-color: $gray-color;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }
 
 .tariffs__name {
@@ -55,12 +100,34 @@
   text-transform: uppercase;
   margin: 0;
   padding: 13px 15px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    padding: 11px 8px 0 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    padding: 14px 8px 0 12px;
+  }
 }
 
 .tariffs__value {
   @include text-value(24px, 30px, 300, white);
   margin: 0;
   padding: 4px 15px 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 25px;
+    padding: 0 8px 9px 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 2px 8px 19px 12px;
+  }
 }
 
 .tariffs__name--hit {
@@ -87,6 +154,45 @@
     left: 14px;
     transform: rotate(-45deg);
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      width: 61px;
+      height: 61px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("..//img/bg-hit-tablet.svg");
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "ХИТ";
+      color: white;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      top: 8px;
+      left: 11px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      width: 74px;
+      height: 73px;
+      background-image: url("..//img/bg-hit.svg");
+    }
+
+    &::after {
+      width: 37px;
+      height: 37px;
+      top: 15px;
+      left: 13px;
+    }
+  }
 }
 
 .tariffs__option {
@@ -96,6 +202,20 @@
   border: 2px solid #e5e5e5;
   background-color: #ffffff;
   box-sizing: border-box;
+
+  @media (max-width: $mobile-width-only) {
+    &::after {
+      content: attr(data-property);
+
+      @include text-value(14px, 30px, 400, $text-color);
+
+      text-transform: uppercase;
+    }
+
+    &:first-child {
+      display: none;
+    }
+  }
 
   &--yes::before,
   &--no::before {
@@ -116,5 +236,23 @@
     height: 32px;
     background-image: url("..//img/icon-yes.svg");
     background-size: 31px auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text-value(14px, 30px, 400, $text-color);
+    width: 152px;
+    padding: 6px 8px 7px 16px;
+
+    &--yes::before,
+    &--no::before {
+      float: none;
+      margin: auto;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    width: 232px;
+    padding: 13px 17px 13px 20px;
   }
 }
