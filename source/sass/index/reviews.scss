@@ -1,0 +1,49 @@
+.reviews__slider {
+  position: relative;
+}
+
+.reviews__btn {
+  display: none;
+}
+
+.reviews__control {
+  position: absolute;
+  bottom: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reviews__list {
+  @include list-init;
+
+  margin-bottom: 20px;
+  padding: 42px 20px;
+  text-align: center;
+}
+
+.reviews__item:not(.reviews__item--active) {
+  display: none;
+}
+
+.reviews__item--active {
+  display: block;
+}
+
+.reviews__name {
+  @include text-value(18px, 30px, 700, $text-color);
+  margin: 0 auto 14px;
+}
+
+.reviews__text {
+  @include text-value(14px, 30px, 400, $text-color);
+
+  &::before {
+    display: inline-block;
+    content: "«";
+  }
+
+  &::after {
+    display: inline-block;
+    content: "»";
+  }
+}
