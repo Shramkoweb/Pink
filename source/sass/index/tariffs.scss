@@ -1,0 +1,120 @@
+.tariffs {
+  position: relative;
+}
+
+.tariffs__bg {
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $gray-color;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 30px;
+  background-position: top left;
+}
+
+.tariffs__slider {
+  min-width: 835px;
+  border-collapse: collapse;
+  border: 2px solid $gray-color;
+}
+
+.tariffs__control {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tariffs__str {
+  min-height: 60px;
+}
+
+.tariffs__str:first-child {
+  min-height: 100px;
+  background-color: $main-color;
+}
+
+.tariffs__empty {
+  border-color: transparent;
+  background-color: $gray-color;
+}
+
+.tariffs__name {
+  text-align: center;
+  border-left: 2px solid #e5e5e5;
+}
+
+.tariffs__title {
+  @include text-value(18px, 30px, 700, white);
+  text-transform: uppercase;
+  margin: 0;
+  padding: 13px 15px 0;
+}
+
+.tariffs__value {
+  @include text-value(24px, 30px, 300, white);
+  margin: 0;
+  padding: 4px 15px 18px;
+}
+
+.tariffs__name--hit {
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 74px;
+    height: 74px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("..//img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "ХИТ";
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 16px;
+    left: 14px;
+    transform: rotate(-45deg);
+  }
+}
+
+.tariffs__option {
+  width: 280px;
+  padding: 13px 0;
+  padding-left: 22px;
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  box-sizing: border-box;
+
+  &--yes::before,
+  &--no::before {
+    content: "";
+    display: block;
+    float: right;
+    margin-right: 18px;
+    width: 27px;
+    height: 27px;
+    background-image: url("..//img/icon-no.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px auto;
+  }
+
+  &--yes::before {
+    width: 32px;
+    height: 32px;
+    background-image: url("..//img/icon-yes.svg");
+    background-size: 31px auto;
+  }
+}
