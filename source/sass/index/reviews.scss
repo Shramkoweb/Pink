@@ -1,9 +1,44 @@
 .reviews__slider {
   position: relative;
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/icon-quotes.svg") center 72px no-repeat;
+  }
 }
 
 .reviews__btn {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 22px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    border: none;
+    background-color: white;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    cursor: pointer;
+
+    &--back {
+      left: 10px;
+      background-image: url("../img/icon-review-arrow-left.svg");
+    }
+
+    &--forward {
+      background-image: url("../img/icon-review-arrow-right.svg");
+      right: 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
 }
 
 .reviews__control {
@@ -19,6 +54,15 @@
   margin-bottom: 20px;
   padding: 42px 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 129px;
+    margin-bottom: 0;
+  }
 }
 
 .reviews__item:not(.reviews__item--active) {
@@ -27,11 +71,44 @@
 
 .reviews__item--active {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .reviews__name {
   @include text-value(18px, 30px, 700, $text-color);
   margin: 0 auto 14px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    margin-bottom: 0;
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.reviews__about-author {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    @include text-value(14px, 30px, 400, $text-color);
+    margin-top: 2px;
+    padding: 0 20px;
+    order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
 }
 
 .reviews__text {
@@ -45,5 +122,24 @@
   &::after {
     display: inline-block;
     content: "»";
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    margin-top: 23px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+    padding: 37px 70px 3px;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
   }
 }
