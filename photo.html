@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Пинк: фотографии</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="js/picturefill.min.js" async=""></script>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <div style="display: none">
+      <svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-editor-contrast" viewbox="-35.422 -7.96 31.92 31.92"><path fill="currentColor" d="M-19.462-3.96c6.595 0 11.96 5.365 11.96 11.96s-5.365 11.96-11.96 11.96-11.96-5.365-11.96-11.96 5.365-11.96 11.96-11.96m0-4c-8.814 0-15.96 7.145-15.96 15.96 0 8.813 7.146 15.96 15.96 15.96S-3.502 16.813-3.502 8c0-8.815-7.146-15.96-15.96-15.96z"></path><path fill="currentColor" d="M-19.462 16.331a8.519 8.519 0 0 0 8.52-8.52 8.518 8.518 0 0 0-8.52-8.519"></path></symbol><symbol id="icon-editor-crop" viewbox="0 0 48 48"><path fill="none" d="M0 0h48v48H0V0z"></path><path fill="currentColor" d="M34 30h4V14c0-2.21-1.79-4-4-4H18v4h16v16zm-20 4V2h-4v8H2v4h8v20c0 2.21 1.79 4 4 4h20v8h4v-8h8v-4H14z"></path></symbol><symbol id="icon-editor-fill" viewbox="0 0 48 48"><path fill="none" d="M0 0h48v48H0V0z"></path><path fill="currentColor" d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11c.58.59 1.35.88 2.12.88s1.54-.29 2.12-.88l11-11a3 3 0 0 0 0-4.24zM10.41 20L20 10.42 29.59 20H10.41zM38 23s-4 4.33-4 7c0 2.21 1.79 4 4 4s4-1.79 4-4c0-2.67-4-7-4-7zM0 40h48v3H0z"></path></symbol><symbol id="icon-facebook" viewbox="0 0 8.673 18.944"><path fill="#d22856" d="M6.275 3.357h2.398V0H5.795C2.656.181 1.54 2.387 1.948 6.115H0v3.517h1.958v9.312h3.837V9.632h2.857V6.115H5.786c-.021-1.045-.036-2.406.489-2.758z"></path></symbol><symbol id="icon-menu-burger" viewbox="0 0 49.945 24.007"><path fill="currentColor" d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z"></path><path fill="currentColor" d="M1.137 0C.51 0 0 .428 0 1.01v1.981c0 .558.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01V1.01c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.003c-.627 0-1.137.428-1.137 1.01v1.98c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.98c0-.558-.494-1.01-1.138-1.01H1.137zm0 10.002C.51 20.005 0 20.434 0 21.016v1.981c0 .557.494 1.01 1.139 1.01H48.81c.628 0 1.138-.428 1.138-1.01v-1.981c0-.558-.494-1.011-1.138-1.011H1.137z"></path></symbol><symbol id="icon-menu-cross" viewbox="0 0 23.867 23.867"><path fill="currentColor" d="M15.087 11.933l8.56-8.559a.75.75 0 0 0 0-1.061L21.554.22a.747.747 0 0 0-1.06 0l-8.561 8.56L3.373.22a.771.771 0 0 0-1.061 0L.22 2.313a.75.75 0 0 0 0 1.061l8.56 8.559-8.56 8.559a.751.751 0 0 0 0 1.062l2.093 2.094a.744.744 0 0 0 1.06 0l8.561-8.56 8.56 8.56a.746.746 0 0 0 1.06 0l2.093-2.094a.751.751 0 0 0 0-1.062l-8.56-8.559z"></path></symbol><symbol id="icon-twitter" viewbox="0 0 17.5 14.663"><path fill="#d22856" fill-rule="evenodd" clip-rule="evenodd" d="M11.283.153c1.736-.485 3.074.263 3.685 1.151.694-.226 1.372-.47 2.072-.691-.004.841-.538 1.478-.883 1.727.704.166 1.343-.48 1.343-.48-.175.976-1.035 1.746-1.611 1.977-.239 6.592-3.272 10.956-10.382 10.823h-.46c-.422 0-4.29-.45-5.047-1.843 2.341.192 4.011-.412 4.835-1.15-.989-.293-2.761-.464-3.07-2.881.362.105.583.223 1.228.117C1.757 8.067.385 7.366.461 5.218c.294.32 1.1.523 1.381.461C1.117 5.444-.188 2.398.921.843 2.794 2.654 4.769 4.364 8.29 4.528 8.506 2.288 9.461.787 11.283.153z"></path></symbol><symbol id="icon-youtube" viewbox="0 0 14.64 13.96"><path fill="#d22856" d="M1.775 13.78C.799 14.257 0 13.758 0 12.671V1.29C0 .202.799-.295 1.775.181l12.133 5.932c.975.478.975 1.258 0 1.736L1.775 13.78z"></path></symbol><symbol id="logo-htmlacademy" viewbox="0 0 26.943 34.09"><title>HTML Academy</title><path fill="currentColor" d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"></path></symbol><symbol id="logo-pink-blue-desktop" viewbox="0 0 146.3 40.375"><path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.063c0 4.86-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.287-1.289 1.287-.676 0-1.256-.58-1.256-1.287l.002-20.119zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.002zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 0 1-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.225.58 1.225 1.256v20.349c0 .677-.48 1.19-1.158 1.19h-.129c-.548 0-.936-.321-1.318-.772l-13.976-17.867v17.449c0 .677-.547 1.257-1.257 1.257-.676 0-1.223-.58-1.223-1.257V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.936 0 .676-.577 1.288-1.285 1.288-.482 0-.807-.259-1.03-.58l-8.401-10.464-4.863 4.861v4.895a1.29 1.29 0 0 1-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.006z" fill="currentColor"><path fill="#D22856" d="M98.498 9.875a3.623 3.623 0 0 1-3.623-3.624 3.625 3.625 0 0 1-3.625 3.624 3.625 3.625 0 0 1 3.625 3.624 3.623 3.623 0 0 1 3.623-3.624z"><g fill="#D22856"><path d="M43.094 19.313c.246 0 .489.014.73.033a2.491 2.491 0 0 0-2.136-1.221 1.994 1.994 0 0 1-1.884-1.354c-.727.208-1.425.482-2.089.816.062.017.122.038.188.038a2 2 0 0 1 2 2c0 .096-.015.188-.028.281 1-.382 2.084-.593 3.219-.593z"><path d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 1 0 0 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.445-3.557-2.453-6.628-5.305-8.522a2.503 2.503 0 0 0-1.529 2.303c0 .088-.015.171-.026.256a9.034 9.034 0 0 1 3.829 5.965c.082.488.135.987.135 1.5 0 .512-.053 1.012-.135 1.5-.716 4.271-4.421 7.53-8.896 7.53-4.475 0-8.181-3.259-8.896-7.53a9.035 9.035 0 0 1-.135-1.5c0-.513.053-1.012.135-1.5a8.945 8.945 0 0 1 .808-2.484 1.994 1.994 0 0 1-1.852-1.984.739.739 0 0 0-.192-.488 11.95 11.95 0 0 0-1.795 4.957h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 1 0 0-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.079.629.215 1.237.387 1.831a.726.726 0 0 0 .102-.354 2 2 0 0 1 2-2c.166 0 .324.024.478.062a8.337 8.337 0 0 1-.074-1.042c0-.512.053-1.011.135-1.5.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.715 4.272-4.421 7.531-8.896 7.531a8.959 8.959 0 0 1-5.386-1.794c-.35.302-.8.491-1.299.491a.75.75 0 0 0-.749.748c0 .289-.065.563-.176.812a11.94 11.94 0 0 0 7.614 2.743c6.125 0 11.185-4.604 11.927-10.529h1.814c.742 5.926 5.802 10.529 11.927 10.529s11.186-4.604 11.927-10.529H59c.012 0 .023-.005.036-.005.895.002 1.692-.715 1.426-1.824z"></path></path></g><path fill="#283645" d="M50.686 16.125a4.499 4.499 0 0 1-4.499-4.499 4.499 4.499 0 0 1-4.499 4.499 4.499 4.499 0 0 1 4.499 4.499 4.498 4.498 0 0 1 4.499-4.499zm-12.782 3.501a2.748 2.748 0 0 1-2.749-2.749 2.748 2.748 0 0 1-2.749 2.749 2.747 2.747 0 0 1 2.749 2.749 2.748 2.748 0 0 1 2.749-2.749zm-27.17 14.446a2.748 2.748 0 0 1-2.749-2.75c0 1.52-1.23 2.75-2.749 2.75a2.747 2.747 0 0 1 2.749 2.748 2.748 2.748 0 0 1 2.749-2.748z"></path></path></path></symbol><symbol id="logo-pink-blue-mobile" viewbox="0 0 146.3 40.375"><path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.063c0 4.86-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.287-1.289 1.287-.676 0-1.256-.58-1.256-1.287l.002-20.119zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.062c0-3.221-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.002zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 0 1-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.225.58 1.225 1.256v20.349c0 .677-.48 1.19-1.158 1.19h-.129c-.548 0-.936-.321-1.318-.772l-13.976-17.867v17.449c0 .677-.547 1.257-1.257 1.257-.676 0-1.223-.58-1.223-1.257V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.16c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.936 0 .676-.577 1.288-1.285 1.288-.482 0-.807-.259-1.03-.58l-8.401-10.464-4.863 4.861v4.895a1.29 1.29 0 0 1-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.006z" fill="currentColor"><path fill="#D22856" d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 1 0 0 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.742-5.927-5.802-10.531-11.927-10.531s-11.186 4.604-11.927 10.531h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 1 0 0-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.741 5.926 5.802 10.53 11.927 10.53s11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895 0 1.692-.717 1.426-1.826zm-34.147 1.828c-.715 4.272-4.421 7.531-8.896 7.531s-8.18-3.259-8.896-7.531c-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.011-.135 1.5zm25.675 0c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.716-4.271 4.421-7.531 8.896-7.531 4.475 0 8.181 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5z"></path></path></symbol><symbol id="logo-pink-white-desktop" viewbox="0 0 146.3 40.375"><path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.064c0 4.861-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.288-1.288 1.288-.676 0-1.256-.58-1.256-1.288v-20.12zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.001zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 0 1-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.224.58 1.224 1.256v20.349c0 .676-.481 1.19-1.158 1.19h-.129c-.548 0-.935-.321-1.319-.772l-13.975-17.868v17.45c0 .676-.547 1.256-1.256 1.256-.676 0-1.223-.58-1.223-1.256V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.935 0 .676-.578 1.288-1.286 1.288-.483 0-.806-.258-1.03-.58l-8.402-10.463-4.863 4.861v4.894a1.29 1.29 0 0 1-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.004z" fill="currentColor"><path fill="#D22856" d="M98.498 9.875a3.623 3.623 0 0 1-3.623-3.624 3.625 3.625 0 0 1-3.625 3.624 3.625 3.625 0 0 1 3.625 3.624 3.623 3.623 0 0 1 3.623-3.624z"><g fill="currentColor"><path d="M43.094 19.313c.246 0 .489.014.73.033a2.491 2.491 0 0 0-2.136-1.221 1.994 1.994 0 0 1-1.884-1.354c-.727.208-1.425.482-2.089.816.062.017.122.038.188.038a2 2 0 0 1 2 2c0 .096-.015.188-.028.281 1-.382 2.084-.593 3.219-.593z"><path d="M60.462 28.016L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 1 0 0 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.445-3.557-2.453-6.628-5.305-8.522a2.503 2.503 0 0 0-1.529 2.303c0 .088-.015.171-.026.256a9.034 9.034 0 0 1 3.829 5.964c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5a8.949 8.949 0 0 1 .808-2.483 1.995 1.995 0 0 1-1.852-1.985.743.743 0 0 0-.192-.489 11.954 11.954 0 0 0-1.795 4.958h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 1 0 0-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.079.628.215 1.237.387 1.831a.726.726 0 0 0 .102-.354 2 2 0 0 1 2-2c.166 0 .324.025.478.063a8.337 8.337 0 0 1-.074-1.042c0-.512.053-1.011.135-1.5.715-4.271 4.421-7.531 8.896-7.531s8.18 3.26 8.896 7.531c.082.489.135.988.135 1.5s-.053 1.012-.135 1.5c-.715 4.272-4.421 7.531-8.896 7.531a8.959 8.959 0 0 1-5.386-1.794c-.35.302-.8.491-1.299.491a.75.75 0 0 0-.749.748c0 .29-.065.564-.176.812a11.94 11.94 0 0 0 7.614 2.743c6.125 0 11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895.001 1.692-.716 1.426-1.825z"></path></path></g><path fill="#D22856" d="M50.686 16.125a4.499 4.499 0 0 1-4.499-4.499 4.499 4.499 0 0 1-4.499 4.499 4.499 4.499 0 0 1 4.499 4.499 4.498 4.498 0 0 1 4.499-4.499zm-12.782 3.501a2.748 2.748 0 0 1-2.749-2.749 2.748 2.748 0 0 1-2.749 2.749 2.747 2.747 0 0 1 2.749 2.749 2.748 2.748 0 0 1 2.749-2.749zm-27.17 14.446a2.748 2.748 0 0 1-2.749-2.75c0 1.52-1.23 2.75-2.749 2.75a2.747 2.747 0 0 1 2.749 2.748 2.748 2.748 0 0 1 2.749-2.748z"></path></path></path></symbol><symbol id="logo-pink-white-mobile" viewbox="0 0 74.426 22.859"><path d="M0 1.449C0 .741.58.161 1.256.161h7.18c5.087 0 8.436 2.704 8.436 7.147v.064c0 4.861-4.057 7.373-8.854 7.373H2.544v6.825c0 .708-.58 1.288-1.288 1.288C.58 22.859 0 22.279 0 21.571V1.449zm8.114 10.979c3.734 0 6.182-1.996 6.182-4.958v-.065c0-3.22-2.415-4.894-6.054-4.894H2.544v9.917h5.57zm13.615-11.14C21.729.58 22.308 0 22.983 0c.709 0 1.288.58 1.288 1.288v20.283c0 .708-.579 1.288-1.288 1.288-.676 0-1.255-.58-1.255-1.288V1.288zm9.141.032c0-.676.579-1.256 1.256-1.256h.354c.58 0 .934.29 1.288.74l13.684 17.45V1.256A1.256 1.256 0 0 1 48.707 0c.676 0 1.223.58 1.223 1.256v20.348c0 .676-.482 1.191-1.158 1.191h-.129c-.548 0-.934-.322-1.32-.772L33.349 4.153v17.45c0 .676-.547 1.256-1.255 1.256-.677 0-1.224-.58-1.224-1.256V1.32zm25.43-.032C56.3.58 56.879 0 57.556 0c.708 0 1.287.58 1.287 1.288v12.331L71.689.451c.29-.258.58-.451.999-.451.676 0 1.224.612 1.224 1.256 0 .354-.161.644-.419.901l-7.984 7.92 8.564 10.561c.225.29.354.547.354.934 0 .676-.579 1.288-1.287 1.288-.483 0-.806-.258-1.03-.58l-8.403-10.463-4.862 4.861v4.894c0 .708-.579 1.288-1.287 1.288-.677 0-1.256-.58-1.256-1.288V1.288z" fill="currentColor"></path></symbol><symbol id="logo-pink-white-tablet" viewbox="0 0 146.3 40.375"><path d="M71.874 18.661c0-.708.58-1.288 1.256-1.288h7.18c5.087 0 8.436 2.704 8.436 7.146v.064c0 4.861-4.057 7.373-8.854 7.373h-5.475v6.825c0 .708-.58 1.288-1.288 1.288-.676 0-1.256-.58-1.256-1.288v-20.12zm8.114 10.98c3.734 0 6.182-1.996 6.182-4.959v-.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917h5.57v-.001zM93.603 18.5c0-.708.579-1.288 1.255-1.288.709 0 1.288.58 1.288 1.288v20.283a1.29 1.29 0 0 1-1.288 1.287c-.676 0-1.255-.579-1.255-1.287V18.5zm9.141.032c0-.676.58-1.256 1.256-1.256h.354c.58 0 .935.29 1.288.74l13.684 17.45V18.468c0-.676.547-1.256 1.256-1.256.676 0 1.224.58 1.224 1.256v20.349c0 .676-.481 1.19-1.158 1.19h-.129c-.548 0-.935-.321-1.319-.772l-13.975-17.868v17.45c0 .676-.547 1.256-1.256 1.256-.676 0-1.223-.58-1.223-1.256V18.532h-.002zm25.429-.032c0-.708.58-1.288 1.257-1.288.708 0 1.286.58 1.286 1.288v12.331l12.848-13.168c.29-.257.579-.451.998-.451.676 0 1.225.612 1.225 1.256 0 .354-.162.644-.42.901l-7.984 7.92 8.564 10.561c.225.291.354.547.354.935 0 .676-.578 1.288-1.286 1.288-.483 0-.806-.258-1.03-.58l-8.402-10.463-4.863 4.861v4.894a1.29 1.29 0 0 1-1.286 1.288c-.677 0-1.257-.58-1.257-1.288V18.5h-.004zm-67.711 9.516L55.287 6.651C54.926 4.303 52.694 0 46.688 0a1.5 1.5 0 1 0 0 3c4.856 0 5.575 3.729 5.639 4.143l4.767 19.701h-2.073c-.742-5.927-5.802-10.531-11.927-10.531s-11.186 4.604-11.927 10.531h-1.82c-.741-5.927-5.802-10.531-11.927-10.531S6.235 20.917 5.493 26.844H3.42L8.187 7.143C8.25 6.729 8.97 3 13.826 3a1.5 1.5 0 1 0 0-3C7.82 0 5.588 4.303 5.227 6.651L.052 28.016c-.266 1.109.531 1.826 1.426 1.826.012 0 .023.004.036.004h3.982c.741 5.926 5.802 10.53 11.927 10.53s11.185-4.604 11.927-10.53h1.814c.742 5.926 5.802 10.53 11.927 10.53s11.186-4.604 11.927-10.53H59c.012 0 .023-.004.036-.004.895 0 1.692-.717 1.426-1.826zm-34.147 1.828c-.715 4.272-4.421 7.531-8.896 7.531-4.475 0-8.18-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.715-4.271 4.421-7.531 8.896-7.531 4.475 0 8.18 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5zm25.675 0c-.716 4.272-4.421 7.531-8.896 7.531-4.475 0-8.181-3.259-8.896-7.531-.082-.488-.135-.988-.135-1.5s.053-1.011.135-1.5c.716-4.271 4.421-7.531 8.896-7.531 4.475 0 8.181 3.26 8.896 7.531.082.489.135.988.135 1.5s-.053 1.011-.135 1.5z" fill="currentColor"></path></symbol></svg>
+    </div>
+
+    <div class="bg-container bg-container--header">
+      <header class="page-header">
+        <div class="page-header__bg-nav-wrapper">
+          <div class="page-header__nav-wrapper set-width">
+            <div class="page-header__panel">
+              <a class="page-header__logo" href="index.html">
+                <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23" aria-label="Logo PINK. Main page">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
+                </svg>
+
+                <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
+                </svg>
+
+                <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
+                </svg>
+              </a>
+
+              <button class="page-header__toggle">
+                <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24" aria-label="Open menu">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
+                </svg>
+
+
+                <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24" aria-label="Close menu">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross"></use>
+                </svg>
+              </button>
+            </div>
+            <nav class="main-nav main-nav--nojs">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="index.html">Главная</a>
+                </li>
+
+                <li class="main-nav__item  main-nav__item--active">
+                  <a>Фотографии</a>
+                </li>
+
+                <li class="main-nav__item">
+                  <a href="form.html">Конкурс</a>
+                </li>
+
+                <li class="main-nav__item">
+                  <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+
+        <h1 class="page-header__title">Фотографии пользователей</h1>
+      </header>
+    </div>
+
+    <main class="page-main page-main--photo">
+      <p class="page-main__text set-width">Взгляните на фотографии, которые выкладывают пользователи! Видите,&nbsp;как&nbsp;не хватает ваших?</p>
+
+      <section class="gallery set-width">
+        <h2 class="visually-hidden">Фотогалерея</h2>
+
+        <ul class="gallery__list">
+          <li class="gallery__item gallery__item--panorama">
+            <div class="gallery__img-wrapper">
+              <a class="gallery__img-link" href="img/panorama-desktop@2x.jpg" target="blank" title="Увеличить фото">
+                <span class="gallery__img-label">Панорама дня</span>
+
+                <picture>
+                  <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+                  <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+                  <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+                  <img class="gallery__img gallery__img--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@1x.jpg 1x, img/panorama-mobile@2x.jpg 2x" alt="Panorama">
+                </picture>
+              </a>
+            </div>
+            <div class="gallery__post post post--panorama">
+              <div class="post__author">
+                <span class="post__name">Анна</span>
+
+                <span class="post__time">(5 минут назад)</span>
+              </div>
+              <p class="post__message">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+
+              <button class="post__like" type="button">Нравится: 215</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-car-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="Car">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Левон</span>
+
+                <span class="post__time">(5 часов назад)</span>
+              </div>
+
+              <p class="post__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+
+              <button class="post__like" type="button">Нравится: 356</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-drumset-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x" alt="Drumset">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Антон</span>
+
+                <span class="post__time">(12 часов назад)</span>
+              </div>
+
+              <p class="post__message">Соседи будут рады!</p>
+
+              <button class="post__like" type="button">Нравится: 666</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-window-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="Window">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Борис</span>
+
+                <span class="post__time">(20 часов назад)</span>
+              </div>
+
+              <p class="post__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+
+              <button class="post__like" type="button">Нравится: 215</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-fair-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="Fair">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Сергей</span>
+
+                <span class="post__time">(25 часов назад)</span>
+              </div>
+
+              <p class="post__message">Самая кубанская в мире!</p>
+
+              <button class="post__like" type="button">Нравится: 4</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-pov-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="Pov">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Максим</span>
+
+                <span class="post__time">(40 часов назад)</span>
+              </div>
+
+              <p class="post__message">Где снег-то?</p>
+
+              <button class="post__like" type="button">Нравится: 150</button>
+            </div>
+          </li>
+          <li class="gallery__item">
+            <a href="img/photo-wing-desktop@2x.jpg" target="blank" title="Увеличить фото">
+              <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="Wing">
+              </picture>
+            </a>
+
+            <div class="gallery__post post">
+              <div class="post__author">
+                <span class="post__name">Надежда</span>
+
+                <span class="post__time">(45 часов назад)</span>
+              </div>
+
+              <p class="post__message">Всем GM и взаимные лайки!</p>
+
+              <button class="post__like" type="button">Нравится: 2560</button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="upload set-width">
+        <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
+
+        <p class="upload__offer">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+
+        <div class="upload__photo-editor">
+          <div class="upload__img">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
+              <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" alt="Road">
+            </picture>
+          </div>
+
+          <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
+            <ul class="editor__tools">
+              <li class="editor__item editor__item--mobile-active">
+                <button class="editor__btn editor__btn--crop" type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--crop" width="48" height="48" aria-label="Edit photo. Crop">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-crop"></use>
+                  </svg>
+                </button>
+
+                <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--fill" type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--fill" width="48" height="48" aria-label="Edit photo. Fill">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-fill"></use>
+                  </svg>
+                </button>
+
+                <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+
+              <li class="editor__item">
+                <button class="editor__btn editor__btn--contrast" type="button">
+                  <svg class="editor__btn-icon editor__btn-icon--contrast" width="32" height="32" aria-label="Edit photo. Contrast">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-contrast"></use>
+                  </svg>
+                </button>
+
+                <div class="editor__scale editor__scale--contrast"><span class="visually-hidden">Ползунок</span></div>
+              </li>
+            </ul>
+
+            <div class="editor__buttons">
+              <button class="editor__button editor__button--execute" type="submit">Запостить</button>
+
+              <button class="editor__button editor__button--cancel" type="reset">Отмена</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer set-width">
+      <a class="page-footer__logo" href="index.html">
+        <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
+        </svg>
+
+        <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-desktop"></use>
+        </svg>
+      </a>
+
+      <section class="page-footer__social social">
+        <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--tw" width="17.5px" height="14.663" aria-label="Twitter">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
+          </svg>
+        </a>
+
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--fb" width="8.673px" height="18.944" aria-label="Facebook">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
+          </svg>
+        </a>
+
+        <a class="social__btn" href="#">
+          <svg class="social__img social__img--yt" width="14.64px" height="13.96" aria-label="You-tybe">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
+          </svg>
+        </a>
+      </section>
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">Разработано</span>
+
+        <svg class="copyright__img" width="27" height="34" aria-label="HTML Academy">
+          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
+        </svg>
+      </a>
+    </footer>
+
+    <script src="js/popup.min.js"></script>
+  </body>
+</html>
