@@ -106,12 +106,6 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("build"));
 });
 
-// Публикация проекта на гитхаб
-gulp.task("deploy", function () {
-  return gulp.src("./build/**/*")
-    .pipe(ghPages());
-});
-
 // Cборка билда
 gulp.task("build", gulp.series(
   "clean",
