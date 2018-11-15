@@ -97,8 +97,8 @@ gulp.task("clean", function () {
 // Копирование файлов для сборки
 gulp.task("copy", function () {
   return gulp.src([
-    "sourcefonts/**/*.{woff,woff2}",
-    "sourceimg/**",
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
     "source/js/**"
   ], {
       base: "source"
