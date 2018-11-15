@@ -20,16 +20,18 @@ var server = require("browser-sync").create();
 var ghPages = require('gulp-gh-pages');
 
 // Препроцессор, префиксы, минификация стилей
-gulp.task("style", function() {
-  gulp.src("sass/style.scss")
+gulp.task("style", function () {
+  return gulp.src("source/sass/style.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({browsers: [
-        "last 2 versions",
-        "IE 11",
-        "Firefox ESR"
-      ]})
+      autoprefixer({
+        browsers: [
+          "last 2 versions",
+          "IE 11",
+          "Firefox ESR"
+        ]
+      })
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(minify())
@@ -39,36 +41,36 @@ gulp.task("style", function() {
 });
 
 // Оптимизация графики
-gulp.task("images", function() {
+gulp.task("images", function () {
   return gulp.src("build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.jpegtran({ progressive: true }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"));
 });
 
 // Конвертация JPEG и PNG в формат WEBP (качество — 90%)
-gulp.task("webp", function() {
-  return gulp.src("img/webp-src/*.{png,jpg}")
-  .pipe(webp({quality: 90}))
-  .pipe(gulp.dest("build/img"));
+gulp.task("webp", function () {
+  return gulp.src("source/img/webp-src/*.{png,jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"));
 });
 
 // Создание SVG-спрайта
-gulp.task("sprite", function() {
-  return gulp.src("img/sprite-src/*.svg")
+gulp.task("sprite", function () {
+  return gulp.src("source/img/sprite-src/*.svg")
     .pipe(svgmin())
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("img"));
+    .pipe(gulp.dest("build/img"));
 });
 
 // Минификация скриптов
-gulp.task("jsmin", function() {
+gulp.task("jsmin", function () {
   return gulp.src("build/js/*.js")
     .pipe(uglify())
     .pipe(rename({
@@ -78,8 +80,8 @@ gulp.task("jsmin", function() {
 });
 
 // Постпроцессинг HTML-файлов
-gulp.task("html", function() {
-  return gulp.src("*.html")
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
     .pipe(posthtml([
       include()
     ]))
@@ -88,49 +90,42 @@ gulp.task("html", function() {
 });
 
 // Очистка билда
-gulp.task("clean", function() {
+gulp.task("clean", function () {
   return del("build");
 });
 
 // Копирование файлов для сборки
-gulp.task("copy", function() {
+gulp.task("copy", function () {
   return gulp.src([
-    "fonts/**/*.{woff,woff2}",
-    "img/**",
-    "!img/sprite-src{,/**}",
-    "!img/sprite.svg",
-    "!img/webp-src{,/**}",
-    "js/**"
+    "sourcefonts/**/*.{woff,woff2}",
+    "sourceimg/**",
+    "source/js/**"
   ], {
-    base: "."
-  })
-  .pipe(gulp.dest("build"));
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
 });
 
 // Публикация проекта на гитхаб
-gulp.task("deploy", function() {
+gulp.task("deploy", function () {
   return gulp.src("./build/**/*")
     .pipe(ghPages());
 });
 
 // Cборка билда
-gulp.task("build", function(done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "jsmin",
-    "images",
-    "webp",
-    "sprite",
-    "html",
-    "deploy",
-    done
-  );
-});
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "style",
+  "jsmin",
+  "images",
+  "webp",
+  "sprite",
+  "html"
+));
 
 // Живой сервер разработки
-gulp.task("serve",function() {
+gulp.task("serve", function () {
   server.init({
     server: "build/",
     notify: false,
