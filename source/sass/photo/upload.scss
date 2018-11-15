@@ -1,0 +1,63 @@
+.upload {
+  margin: 0 auto;
+  padding: 0;
+  background-color: $gray-color;
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width - 20px;
+  }
+}
+
+.upload__offer {
+  @include text-value(14px, 30px, 400, $text-color);
+  margin: 0;
+  padding: 21px 27px 42px 25px;
+  text-align: center;
+  background-color: white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 46px 28px 68px;
+    flex-grow: 1;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
+    padding-bottom: 66px;
+  }
+}
+
+.upload__photo-editor {
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 5px;
+    padding: 42px 20px 55px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 28px;
+    padding: 32px 60px 56px 80px;
+  }
+}
+
+.upload__img {
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    height: 398px;
+    padding-top: 17px;
+    padding-left: 0;
+    margin-right: 17px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 26px;
+  }
+}

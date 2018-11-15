@@ -1,0 +1,145 @@
+.post {
+  max-width: 280px;
+  padding: 16px 17px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  background-color: $gray-color;
+
+  @media (min-width: $tablet-width) {
+    max-width: 300px;
+    min-height: 131px;
+    padding: 23px 27px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 132px;
+    padding-top: 25px;
+  }
+
+  &--panorama {
+    max-width: $panel-width - 40px;
+    height: auto;
+    box-sizing: border-box;
+
+    @media (min-width: $tablet-width) {
+      max-width: $tablet-width - 40px;
+      min-height: 95px;
+      padding: 24px 22px 20px 27px;
+      box-sizing: border-box;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .post__author {
+        order: 1;
+      }
+
+      .post__like {
+        order: 2;
+        min-width: 120px;
+        margin-right: 5px;
+        margin-bottom: 0;
+      }
+
+      .post__message {
+        max-width: 512px;
+        order: 3;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      max-width: $desktop-width - 20px;
+      min-height: 95px;
+      padding: 22px 22px 18px 27px;
+
+      .post__message {
+        max-width: 870px;
+      }
+
+      .post__like {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.post__author {
+  order: 0;
+  min-height: 25px;
+}
+
+.post__name {
+  @include text-value(14px, 24px, 700, $text-color);
+}
+
+.post__time {
+  @include text-value(12px, 24px, 300, $text-color);
+  text-transform: uppercase;
+}
+
+.post__message {
+  max-width: 242px;
+
+  @include text-value(14px, 24px, 400, $text-color);
+  margin: 0;
+  margin-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.post__like {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+
+  @include text-value(11.5px, 24px, 400, $violet-color);
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &::after {
+    display: none;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    padding-right: 17px;
+    background-image: url("..//img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 13px 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 22px;
+    min-width: 240px;
+    justify-content: space-between;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 13px;
+      padding-left: 18px;
+      align-self: center;
+      background-image: url("..//img/icon-heart.svg");
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 13px 13px;
+    }
+  }
+}
