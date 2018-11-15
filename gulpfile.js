@@ -14,10 +14,9 @@ var svgmin = require("gulp-svgmin");
 var uglify = require("gulp-uglify");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
-var run = require("run-sequence");
 var del = require("del");
 var server = require("browser-sync").create();
-var ghPages = require('gulp-gh-pages');
+
 
 // Препроцессор, префиксы, минификация стилей
 gulp.task("style", function () {
