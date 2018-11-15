@@ -13,6 +13,7 @@
     <div style="display: none">
       <include src="source/img/sprite.svg"></include>
     </div>
+
     <div class="bg-container bg-container--header">
       <header class="page-header">
         <div class="page-header__bg-nav-wrapper">
@@ -22,17 +23,22 @@
                 <svg class="page-header__logo-image  page-header__logo-image--mobile" width="74" height="23" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-mobile"></use>
                 </svg>
+
                 <svg class="page-header__logo-image  page-header__logo-image--tablet" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-tablet"></use>
                 </svg>
+
                 <svg class="page-header__logo-image  page-header__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-white-desktop"></use>
                 </svg>
               </a>
+
               <button class="page-header__toggle">
                 <svg class="page-header__toggle-icon page-header__toggle-icon--burger" width="50" height="24" aria-label="Open menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-burger"></use>
                 </svg>
+
+
                 <svg class="page-header__toggle-icon page-header__toggle-icon--cross" width="24" height="24" aria-label="Close menu">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-menu-cross"></use>
                 </svg>
@@ -40,14 +46,26 @@
             </div>
             <nav class="main-nav main-nav--nojs">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="index.html">Главная</a></li>
-                <li class="main-nav__item  main-nav__item--active"><a>Фотографии</a></li>
-                <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-                <li class="main-nav__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+                <li class="main-nav__item">
+                  <a href="index.html">Главная</a>
+                </li>
+
+                <li class="main-nav__item  main-nav__item--active">
+                  <a>Фотографии</a>
+                </li>
+
+                <li class="main-nav__item">
+                  <a href="form.html">Конкурс</a>
+                </li>
+
+                <li class="main-nav__item">
+                  <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
+
         <h1 class="page-header__title">Фотографии пользователей</h1>
       </header>
     </div>
@@ -57,11 +75,13 @@
 
       <section class="gallery set-width">
         <h2 class="visually-hidden">Фотогалерея</h2>
+
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--panorama">
             <div class="gallery__img-wrapper">
               <a class="gallery__img-link" href="img/panorama-desktop@2x.jpg" target="blank" title="Увеличить фото">
                 <span class="gallery__img-label">Панорама дня</span>
+
                 <picture>
                   <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
@@ -75,9 +95,11 @@
             <div class="gallery__post post post--panorama">
               <div class="post__author">
                 <span class="post__name">Анна</span>
+
                 <span class="post__time">(5 минут назад)</span>
               </div>
               <p class="post__message">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+
               <button class="post__like" type="button">Нравится: 215</button>
             </div>
           </li>
@@ -92,12 +114,16 @@
                 <img class="gallery__img" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@1x.jpg 1x, img/photo-car-mobile@2x.jpg 2x" alt="Car">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Левон</span>
+
                 <span class="post__time">(5 часов назад)</span>
               </div>
+
               <p class="post__message">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+
               <button class="post__like" type="button">Нравится: 356</button>
             </div>
           </li>
@@ -112,12 +138,16 @@
                 <img class="gallery__img" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@1x.jpg 1x, img/photo-drumset-mobile@2x.jpg 2x" alt="Drumset">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Антон</span>
+
                 <span class="post__time">(12 часов назад)</span>
               </div>
+
               <p class="post__message">Соседи будут рады!</p>
+
               <button class="post__like" type="button">Нравится: 666</button>
             </div>
           </li>
@@ -132,12 +162,16 @@
                 <img class="gallery__img" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@1x.jpg 1x, img/photo-window-mobile@2x.jpg 2x" alt="Window">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Борис</span>
+
                 <span class="post__time">(20 часов назад)</span>
               </div>
+
               <p class="post__message">Здесь могла быть ваша цитата о высоком и вечном.</p>
+
               <button class="post__like" type="button">Нравится: 215</button>
             </div>
           </li>
@@ -152,12 +186,16 @@
                 <img class="gallery__img" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@1x.jpg 1x, img/photo-fair-mobile@2x.jpg 2x" alt="Fair">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Сергей</span>
+
                 <span class="post__time">(25 часов назад)</span>
               </div>
+
               <p class="post__message">Самая кубанская в мире!</p>
+
               <button class="post__like" type="button">Нравится: 4</button>
             </div>
           </li>
@@ -172,12 +210,16 @@
                 <img class="gallery__img" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@1x.jpg 1x, img/photo-pov-mobile@2x.jpg 2x" alt="Pov">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Максим</span>
+
                 <span class="post__time">(40 часов назад)</span>
               </div>
+
               <p class="post__message">Где снег-то?</p>
+
               <button class="post__like" type="button">Нравится: 150</button>
             </div>
           </li>
@@ -192,12 +234,16 @@
                 <img class="gallery__img" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@1x.jpg 1x, img/photo-wing-mobile@2x.jpg 2x" alt="Wing">
               </picture>
             </a>
+
             <div class="gallery__post post">
               <div class="post__author">
                 <span class="post__name">Надежда</span>
+
                 <span class="post__time">(45 часов назад)</span>
               </div>
+
               <p class="post__message">Всем GM и взаимные лайки!</p>
+
               <button class="post__like" type="button">Нравится: 2560</button>
             </div>
           </li>
@@ -206,7 +252,9 @@
 
       <section class="upload set-width">
         <h2 class="visually-hidden">Загрузите свою фотографию!</h2>
+
         <p class="upload__offer">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+
         <div class="upload__photo-editor">
           <div class="upload__img">
             <picture>
@@ -215,6 +263,7 @@
               <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@1x.jpg 1x, img/photo-road-mobile@2x.jpg 2x" alt="Road">
             </picture>
           </div>
+
           <form class="editor" action="https://echo.htmlacademy.ru/" method="post">
             <ul class="editor__tools">
               <li class="editor__item editor__item--mobile-active">
@@ -223,27 +272,34 @@
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-crop"></use>
                   </svg>
                 </button>
+
                 <div class="editor__scale editor__scale--crop"><span class="visually-hidden">Ползунок</span></div>
               </li>
+
               <li class="editor__item">
                 <button class="editor__btn editor__btn--fill" type="button">
                   <svg class="editor__btn-icon editor__btn-icon--fill" width="48" height="48" aria-label="Edit photo. Fill">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-fill"></use>
                   </svg>
                 </button>
+
                 <div class="editor__scale editor__scale--fill"><span class="visually-hidden">Ползунок</span></div>
               </li>
+
               <li class="editor__item">
                 <button class="editor__btn editor__btn--contrast" type="button">
                   <svg class="editor__btn-icon editor__btn-icon--contrast" width="32" height="32" aria-label="Edit photo. Contrast">
                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-editor-contrast"></use>
                   </svg>
                 </button>
+
                 <div class="editor__scale editor__scale--contrast"><span class="visually-hidden">Ползунок</span></div>
               </li>
             </ul>
+
             <div class="editor__buttons">
               <button class="editor__button editor__button--execute" type="submit">Запостить</button>
+
               <button class="editor__button editor__button--cancel" type="reset">Отмена</button>
             </div>
           </form>
@@ -256,22 +312,27 @@
         <svg class="page-footer__logo-image  page-footer__logo-image--mobile" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-mobile"></use>
         </svg>
+
         <svg class="page-footer__logo-image  page-footer__logo-image--desktop" width="146.3" height="40.375" aria-label="Logo PINK. Main page">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-pink-blue-desktop"></use>
         </svg>
       </a>
+
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Ссылки на социальные сети</h2>
+
         <a class="social__btn" href="#">
           <svg class="social__img social__img--tw" width="17.5px" height="14.663" aria-label="Twitter">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-twitter"></use>
           </svg>
         </a>
+
         <a class="social__btn" href="#">
           <svg class="social__img social__img--fb" width="8.673px" height="18.944" aria-label="Facebook">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-facebook"></use>
           </svg>
         </a>
+
         <a class="social__btn" href="#">
           <svg class="social__img social__img--yt" width="14.64px" height="13.96" aria-label="You-tybe">
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-youtube"></use>
@@ -280,6 +341,7 @@
       </section>
       <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__text">Разработано</span>
+
         <svg class="copyright__img" width="27" height="34" aria-label="HTML Academy">
           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-htmlacademy"></use>
         </svg>
@@ -287,6 +349,5 @@
     </footer>
 
     <script src="js/popup.min.js"></script>
-
   </body>
 </html>
