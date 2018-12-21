@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var server = require("browser-sync").create();
+const image = require("gulp-image");
 
 
 // Препроцессор, префиксы, минификация стилей
@@ -40,19 +41,26 @@ gulp.task("style", function () {
 });
 
 // Оптимизация графики
-gulp.task("images", function () {
-  return gulp.src("build/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({ optimizationLevel: 3 }),
-      imagemin.jpegtran({ progressive: true }),
-      imagemin.svgo()
-    ]))
+gulp.task("images", (done) => {
+  gulp.src("build/img/**/*.{png,jpg,svg}")
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: true,
+      jpegRecompress: false,
+      mozjpeg: true,
+      guetzli: false,
+      gifsicle: true,
+      svgo: ['--disable', 'cleanupIDs',],
+      concurrent: 10,
+    }))
     .pipe(gulp.dest("build/img"));
+  done();
 });
 
 // Конвертация JPEG и PNG в формат WEBP (качество — 90%)
 gulp.task("webp", function () {
-  return gulp.src("source/img/webp-src/*.{png,jpg}")
+  return gulp.src("source/img/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
     .pipe(gulp.dest("build/img"));
 });
@@ -111,10 +119,10 @@ gulp.task("build", gulp.series(
   "copy",
   "style",
   "jsmin",
-  "images",
   "webp",
   "sprite",
-  "html"
+  "html",
+  "images"
 ));
 
 // Живой сервер разработки

@@ -8,8 +8,10 @@
     "autoprefixer": "9.3.x",
     "browser-sync": "2.26.x",
     "del": "^3.0.0",
+    "gh-pages": "^2.0.1",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
+    "gulp-image": "^4.4.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
@@ -23,8 +25,7 @@
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "9.7.x",
-    "stylelint-config-htmlacademy": "0.1.x",
-    "gh-pages": "^2.0.1"
+    "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -49,5 +50,9 @@
   ],
   "engines": {
     "node": "8.12"
+  },
+  "dependencies": {
+    "imagemin": "^6.0.0",
+    "imagemin-optipng": "^6.0.0"
   }
 }
